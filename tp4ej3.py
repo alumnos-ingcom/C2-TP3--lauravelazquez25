@@ -1,6 +1,6 @@
 ################
 # Laura Velazquez - @lauravelazquez25
-#
+# Ejercicio Conversor de temperaturas
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
