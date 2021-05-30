@@ -7,24 +7,28 @@
 
 ### Conversion de temperaturas
 def convertir_a_farenheit(centigrados):
-    temp_farenheit = (centigrados * 5/9 ) + 32
+    temp_farenheit = (centigrados * 9/5 ) + 32
+    temp_farenheit = round (temp_farenheit, 2)
     return temp_farenheit
 
 
 def convertir_a_centigrados(farenheit):
     temp_centig = (farenheit -32 ) * 5/9
+    temp_centig = round (temp_centig , 2)
     return temp_centig
 
 
 def prueba():
-    menu =""" Este programa le permite convertir temperaturas en grados centigrados a farenheit y viceversa'
-Elija una opcion:
-1-Farenheit a Centigrados
-2-Centigrados a Farenheit"""
-    if menu =='1':
+    menu =int(input(""" Este programa le permite convertir temperaturas en grados centigrados a farenheit y viceversa'
+    Elija una opcion:
+    1-Farenheit a Centigrados
+    2-Centigrados a Farenheit"""))
+    
+    if menu == 1:
+        
         temperatura1= int(input('Ingrese la temperatura en grados farenheit: '))
         print ('La temperatura corresponde a ',convertir_a_centigrados(temperatura1), 'grados centigrados')
-    elif menu =='2':
+    elif menu == 2:
         temperatura2 = int(input('Ingrese la temperatura en grados centigrados: '))
         print ('La temperatura corresponde a ', convertir_a_farenheit(temperatura2), 'grados farenheit')
 
