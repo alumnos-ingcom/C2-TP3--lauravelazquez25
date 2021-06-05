@@ -8,14 +8,28 @@
 # Ordenar 3 valores
 
 
-def ordenar_mayor_a_menor(uno,dos,tres):
-    tupla= uno, dos, tres
-    if tupla[0] < tupla[1] and tupla[1] < tupla[2]:
-        tupla_menor_a_mayor = tupla[0],tupla[1],tupla[2]
-        return tupla_menor_a_mayor
+def ordenar_menor_a_mayor(uno,dos,tres):
+    ingreso = [uno,dos,tres]
+    if uno < dos and dos < tres:
+        ingreso = [uno, dos ,tres]
+        return ingreso
+
+    elif uno < tres and tres < dos:
+        ingreso = [uno, tres,dos]
+        return ingreso
     
-    #elif  < tres and 
-        
+    elif dos < uno and uno < tres:
+        ingreso = [dos,uno, tres]
+        return ingreso
+    
+    elif dos < tres and tres < uno:
+        ingreso = [dos,tres,uno]
+        return ingreso
+    else:
+        ingreso = [tres,dos,uno]
+        return ingreso
+    return ()
+       
     
 
 
@@ -24,10 +38,10 @@ def prueba():
     num2= int(input('Ingrese un numero :'))
     num3 = int(input('Ingrese un numero :'))
     
-    tupla = num1,num2,num3
-    print(ordenar_mayor_a_menor(num1,num2,num3))
+    print (tuple(ordenar_menor_a_mayor(num1 ,num2 ,num3)))
+    
     
 
 if __name__ == "__main__":
     prueba()   
-        
+##        
