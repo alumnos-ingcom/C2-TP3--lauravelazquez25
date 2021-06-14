@@ -12,22 +12,22 @@ def ordenar_menor_a_mayor(uno,dos,tres):
     ingreso = [uno,dos,tres]
     if uno < dos and dos < tres:
         ingreso = [uno, dos ,tres]
-        return ingreso
+        return tuple(ingreso)
 
     elif uno < tres and tres < dos:
         ingreso = [uno, tres,dos]
-        return ingreso
+        return tuple(ingreso)
     
     elif dos < uno and uno < tres:
         ingreso = [dos,uno, tres]
-        return ingreso
+        return tuple(ingreso)
     
     elif dos < tres and tres < uno:
         ingreso = [dos,tres,uno]
-        return ingreso
+        return tuple(ingreso)
     else:
         ingreso = [tres,dos,uno]
-        return ingreso
+        return tuple(ingreso)
     return ()
        
     
@@ -37,8 +37,8 @@ def prueba():
     num1 = int(input('Ingrese un numero :'))
     num2= int(input('Ingrese un numero :'))
     num3 = int(input('Ingrese un numero :'))
-    
-    print (tuple(ordenar_menor_a_mayor(num1 ,num2 ,num3)))
+    ordenado = ordenar_menor_a_mayor(num1 ,num2 ,num3)
+    print (ordenado)
     
     
 
