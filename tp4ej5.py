@@ -7,18 +7,20 @@
 
 # Numeros positivos y negativos
 
+
 def signo(numero):
     if numero < 0:
-        return ('El numero es negativo')
+        return 'El numero es negativo'
     elif numero == 0:
-        return ('El numero es cero')
+        return 'El numero es cero'
     else:
-        return ('El numero es positivo')
+        return 'El numero es positivo'
     
 
 def prueba():
     ingreso = int(input('Ingrese un numero: '))
-    print(signo (ingreso))    
+    signo_del_numero = signo (ingreso)
+    print(signo_del_numero)    
     
     
 if __name__ == "__main__":
