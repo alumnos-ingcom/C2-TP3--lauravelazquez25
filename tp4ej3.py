@@ -22,15 +22,17 @@ def prueba():
     menu =int(input(""" Este programa le permite convertir temperaturas en grados centigrados a farenheit y viceversa'
     Elija una opcion:
     1-Farenheit a Centigrados
-    2-Centigrados a Farenheit"""))
+    2-Centigrados a Farenheit  """))
     
     if menu == 1:
         
         temperatura1= int(input('Ingrese la temperatura en grados farenheit: '))
-        print ('La temperatura corresponde a ',convertir_a_centigrados(temperatura1), 'grados centigrados')
+        temperatura_convertida = convertir_a_centigrados(temperatura1)
+        print ('La temperatura corresponde a ',temperatura_convertida, 'grados centigrados')
     elif menu == 2:
         temperatura2 = int(input('Ingrese la temperatura en grados centigrados: '))
-        print ('La temperatura corresponde a ', convertir_a_farenheit(temperatura2), 'grados farenheit')
+        conversion_temperatura = convertir_a_farenheit(temperatura2)
+        print ('La temperatura corresponde a ',conversion_temperatura , 'grados farenheit')
 
 if __name__ == "__main__":
     prueba()
