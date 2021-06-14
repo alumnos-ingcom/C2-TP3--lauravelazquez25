@@ -9,19 +9,19 @@
 
 def compara(numero, otro_numero):
     if numero < otro_numero:
-        return ('-1')
+        return numero
     elif numero == otro_numero:
-        return ('0')
+        return ('son iguales')
     else:
-        return ('1')
+        return otro_numero
                 
 
 
 def prueba():
     numero = int(input('Ingrese un numero: '))
     otro_numero = int (input('Ingrese otro numero: '))
-    
-    print (compara(numero, otro_numero))
+    comparacion = compara(numero, otro_numero)
+    print (f'El menor de los numeros es: {comparacion}')
                    
 
 if __name__ == "__main__":
